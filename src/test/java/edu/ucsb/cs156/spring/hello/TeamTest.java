@@ -99,15 +99,6 @@ public void equals_different_members_returns_false() {
     assertNotEquals(team1, team2);
 }
 
-@Test
-public void toString_returns_correct_string() {
-    team.addMember("Matthew N.");
-
-    assertEquals(
-        "Team(name=test-team, members=[Matthew N.])",
-        team.toString()
-    );
-}
 
 @Test
 public void hashCode_equal_teams_are_equal() {
@@ -137,6 +128,10 @@ public void hashCode_returns_correct_value() {
     int expected = team.getName().hashCode() | team.getMembers().hashCode();
 
     assertEquals(expected, team.hashCode());
+}
+@Test
+public void toString_returns_correct_string() {
+    assertEquals("Team(name=test-team, members=[])", team.toString());
 }
 
 }

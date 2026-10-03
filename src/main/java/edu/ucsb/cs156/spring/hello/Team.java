@@ -92,4 +92,4 @@ public class Team {
     public int hashCode() {
         return this.name.hashCode() | this.members.hashCode();
     }
-}
+    }
